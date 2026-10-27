@@ -2,10 +2,9 @@
 
 This guide explains how to build the installer image (Anaconda) and generate the LiveISO from a custom `bootc` image using `just`.
 
-> [!CAUTION]
-> **ATENÇÃO!!!** ⚠️
-> Este repositório utiliza o **instalador antigo (Anaconda-GTK)**. 
-> Para utilizar o **novo instalador (Anaconda-WEBUI)**, acesse o repositório: [NOME_DO_REPOSITORIO](https://github.com/usuario/repositorio)
+> [!ATTENTION]
+> This repository uses the **legacy installer (Anaconda-GTK)**. 
+> To use the **new installer (Anaconda-WEBUI)**, please visit this repository: [REPOSITORY_NAME](https://github.com/user/repository)
 
 ### 1. Build the Anaconda Image with Your Custom bootc Image
 
