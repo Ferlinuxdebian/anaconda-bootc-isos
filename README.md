@@ -6,15 +6,11 @@ This guide explains how to build the installer image (Anaconda) and generate the
 
 To build the installer container image using your custom `bootc` image, run:
 
-Bash
-
 ```
 sudo just build <your-custom-bootc-image>
 ```
 
 > **Example:**
->
-> Bash
 >
 > ```
 > sudo just build quay.io/centos-bootc/centos-bootc:stream9
@@ -23,8 +19,6 @@ sudo just build <your-custom-bootc-image>
 ### 2. Create the LiveISO with Anaconda
 
 After building the image, generate the installation ISO file with the command:
-
-Bash
 
 ```
 sudo just create-iso
