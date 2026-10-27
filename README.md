@@ -17,7 +17,7 @@ sudo just build <your-custom-bootc-image>
 > Bash
 >
 > ```
-> sudo just build CONTAINER_NAME="quay.io/centos-bootc/centos-bootc:stream9"
+> sudo just build quay.io/centos-bootc/centos-bootc:stream9
 > ```
 
 ### 2. Create the LiveISO with Anaconda
