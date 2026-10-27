@@ -4,7 +4,7 @@ This guide explains how to build the installer image (Anaconda) and generate the
 
 > [!WARNING]
 > **ATTENTION!!!** ⚠️  
-> This method still uses the legacy installer (**Anaconda-GTK**). To use the new installer (**Anaconda-WEBUI**), please visit this repository: [REPOSITORY_NAME](https://github.com/user/repository)
+> This method still uses the legacy installer (**Anaconda-GTK**). To use the new installer (**Anaconda-WEBUI**), please visit this repository: [REPOSITORY_NAME](https://github.com/Ferlinuxdebian/anaconda-webui-bootc-installer)
 
 ### 1. Build the Anaconda Image with Your Custom bootc Image
 
