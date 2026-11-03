@@ -11,7 +11,6 @@ RUN dnf install -qy \
     dracut-network \
     net-tools \
     grub2-efi-x64-cdboot \
-    plymouth \
     default-fonts-core-sans \
     default-fonts-other-sans \
     google-noto-sans-cjk-fonts
