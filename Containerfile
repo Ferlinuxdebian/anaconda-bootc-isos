@@ -1,6 +1,6 @@
 FROM quay.io/fedora/fedora-bootc:45
 
-# Collecting you image bootc personalization
+# Imagem bootc personalizada que será instalada pelo ISO
 ARG CONTAINER_NAME=quay.io/fedora/fedora-bootc:45
 
 # Quando "true", exige que a política de contêineres requeira assinaturas
@@ -19,8 +19,8 @@ RUN dnf install -qy \
     default-fonts-other-sans \
     google-noto-sans-cjk-fonts
 
-# these are necessary build tools. if you use a separate build container then
-# these tools should be installed there
+# estas são ferramentas de compilação necessárias. Se você usar um container
+# de compilação separado, elas devem ser instaladas nele
 RUN dnf install -qy \
     xorrisofs \
     squashfs-tools
@@ -43,7 +43,7 @@ RUN mkdir -p /boot/efi && cp -ra /usr/lib/efi/*/*/EFI /boot/efi
 
 # ---
 
-# some configuration for our ISO
+# algumas configurações para o nosso ISO
 
 RUN mkdir -p /usr/lib/image-builder/bootc
 
@@ -57,7 +57,7 @@ grub2:
       initrd: \${initrdpath}
 EOF
 
-# some configuration for anaconda
+# algumas configurações para o anaconda
 
 COPY <<EOT /usr/share/anaconda/interactive-defaults.ks
 bootc --source-imgref registry:${CONTAINER_NAME} --target-imgref ${CONTAINER_NAME}
@@ -65,8 +65,8 @@ EOT
 
 # ---
 
-# these things are normally performed by `lorax` to make `anaconda` work; this is the
-# bare minimum to get things to work
+# estas coisas normalmente são feitas pelo `lorax` para o `anaconda` funcionar;
+# isto é o mínimo necessário
 
 RUN echo "install:x:0:0:root:/root:/usr/libexec/anaconda/run-anaconda" >> /etc/passwd && \
     echo "install::14438:0:99999:7:::" >> /etc/shadow && \
